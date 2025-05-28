@@ -29,6 +29,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 interface Props {
   window?: () => Window;
+  children: React.ReactElement;
 }
 
 function HideOnScroll(props: Props) {
