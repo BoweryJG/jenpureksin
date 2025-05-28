@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Container, Typography, Box } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 const AboutPage: React.FC = () => {
   return (
