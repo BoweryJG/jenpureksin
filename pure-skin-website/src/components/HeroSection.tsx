@@ -152,7 +152,7 @@ const HeroSection: React.FC = () => {
               }}
             >
               <img
-                src="/header.png"
+                src="/headerimage.png"
                 alt="Pure Skin Palm Beach Medical Spa - Professional facial treatment"
                 style={{
                   width: '100%',
