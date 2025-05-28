@@ -75,6 +75,7 @@ const TreatmentCard: React.FC<{ treatment: TreatmentResult; intensity: number }>
   treatment,
   intensity,
 }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const theme = useTheme();
   const [showAfter, setShowAfter] = useState(false);
 
@@ -231,6 +232,7 @@ const TreatmentCard: React.FC<{ treatment: TreatmentResult; intensity: number }>
 };
 
 const TreatmentVisualizer: React.FC<TreatmentVisualizerProps> = ({ treatments = treatmentData }) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const theme = useTheme();
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeTab, setActiveTab] = useState(0);
