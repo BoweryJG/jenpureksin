@@ -74,7 +74,7 @@ const Orb: React.FC<OrbProps> = ({
         bottom,
         width: size,
         height: size,
-        animation: floatAnimation ? `${float} 6s ease-in-out infinite` : undefined,
+        animation: floatAnimation ? `${float} 3s ease-in-out infinite` : undefined,
       }}
     >
       <Box
@@ -124,7 +124,7 @@ const ChildOrb: React.FC<ChildOrbProps> = ({ distance, size, color, opacity, del
         left: '50%',
         transform: `translate(-50%, -50%) translateX(${distance}px)`,
         transformOrigin: `${-distance}px center`,
-        animation: `${rotateCounterClockwise} 20s linear infinite`,
+        animation: `${rotateCounterClockwise} 4s linear infinite`,
         animationDelay: delay,
       }}
     >
@@ -304,10 +304,10 @@ const HeroSection: React.FC = () => {
       <Orb
         size={250}
         color={theme.palette.primary.main}
-        opacity={0.1}
+        opacity={0.2}
         bottom={-100}
         left={-100}
-        animationDuration="40s"
+        animationDuration="8s"
         floatAnimation
       >
         <ChildOrb
@@ -337,10 +337,10 @@ const HeroSection: React.FC = () => {
       <Orb
         size={200}
         color={theme.palette.secondary.main}
-        opacity={0.08}
+        opacity={0.15}
         top={50}
         right={-80}
-        animationDuration="35s"
+        animationDuration="7s"
       >
         <ChildOrb
           distance={120}
@@ -362,10 +362,10 @@ const HeroSection: React.FC = () => {
       <Orb
         size={150}
         color={theme.palette.primary.light}
-        opacity={0.06}
+        opacity={0.12}
         top="40%"
         left={-50}
-        animationDuration="45s"
+        animationDuration="9s"
         floatAnimation
       >
         <ChildOrb
@@ -388,10 +388,10 @@ const HeroSection: React.FC = () => {
       <Orb
         size={100}
         color={theme.palette.secondary.light}
-        opacity={0.05}
+        opacity={0.1}
         top={120}
         left={100}
-        animationDuration="30s"
+        animationDuration="6s"
       >
         <ChildOrb
           distance={70}
@@ -406,10 +406,10 @@ const HeroSection: React.FC = () => {
       <Orb
         size={180}
         color={theme.palette.primary.dark}
-        opacity={0.07}
+        opacity={0.13}
         bottom={50}
         right={-60}
-        animationDuration="50s"
+        animationDuration="10s"
       >
         <ChildOrb
           distance={100}
