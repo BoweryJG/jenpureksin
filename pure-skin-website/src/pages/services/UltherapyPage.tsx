@@ -17,8 +17,7 @@ import {
   AccordionDetails,
   useTheme,
   Chip,
-  Paper,
-  Divider
+  Paper
 } from '@mui/material';
 import {
   CheckCircle,

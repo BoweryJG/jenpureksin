@@ -27,9 +27,6 @@ import {
   FitnessCenter,
   ExpandMore,
   Science,
-  TrendingUp,
-  AccessTime,
-  AutoFixHigh,
   Phone,
   AcUnit,
   Timeline

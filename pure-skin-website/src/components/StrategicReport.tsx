@@ -44,14 +44,15 @@ import { motion } from 'framer-motion';
 const StrategicReport: React.FC = () => {
   const theme = useTheme();
 
-  const marketData = {
-    totalMarketSize: '$4.2B',
-    cagr: '8.2%',
-    floridaShare: '12%',
-    westPalmBeachTAM: '$42M',
-    competitorCount: 127,
-    premiumSegment: '35%'
-  };
+  // Market data - commented out to fix build warning
+  // const marketData = {
+  //   totalMarketSize: '$4.2B',
+  //   cagr: '8.2%',
+  //   floridaShare: '12%',
+  //   westPalmBeachTAM: '$42M',
+  //   competitorCount: 127,
+  //   premiumSegment: '35%'
+  // };
 
   const competitiveAnalysis = [
     {

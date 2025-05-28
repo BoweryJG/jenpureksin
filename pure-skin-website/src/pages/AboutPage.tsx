@@ -6,7 +6,6 @@ import {
   Typography,
   Grid,
   Card,
-  CardContent,
   Button,
   List,
   ListItem,
