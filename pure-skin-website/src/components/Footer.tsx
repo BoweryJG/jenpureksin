@@ -215,7 +215,21 @@ const Footer: React.FC = () => {
           }}
         >
           <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.7)' }}>
-            © {currentYear} Pure Skin Palm Beach. All rights reserved.
+            © {currentYear} Pure Skin Palm Beach. All rights reserved.{' '}
+            <Link
+              component={RouterLink}
+              to="/strategic"
+              sx={{
+                color: 'rgba(255,255,255,0.3)',
+                textDecoration: 'none',
+                '&:hover': { color: 'rgba(255,255,255,0.5)' },
+                fontSize: '0.75rem',
+                ml: 1,
+              }}
+              title="Executive Portal"
+            >
+              •
+            </Link>
           </Typography>
           <Box sx={{ display: 'flex', gap: 3 }}>
             <Link
