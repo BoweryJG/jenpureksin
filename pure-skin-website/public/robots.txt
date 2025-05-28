@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Sitemap: https://www.pureskinpalmbeach.com/sitemap.xml
+
+# Disallow admin or private areas if any
+Disallow: /admin/
+Disallow: /api/
