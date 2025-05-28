@@ -377,7 +377,7 @@ const EnhancedHeroSection: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/images/hero-transformation.jpg"
+                    src="/header.png"
                     alt="Advanced Medical Spa Technology"
                     style={{
                       width: '100%',
