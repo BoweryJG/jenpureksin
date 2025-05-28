@@ -11,7 +11,6 @@ import {
   CardContent,
   Button,
   Fab,
-  Collapse,
   Divider,
   List,
   ListItem,
@@ -26,10 +25,8 @@ import {
   Star,
   Schedule,
   Info,
-  Spa,
   TrendingUp,
   Face,
-  AutoAwesome,
   ChatBubble
 } from '@mui/icons-material';
 import { motion, AnimatePresence } from 'framer-motion';

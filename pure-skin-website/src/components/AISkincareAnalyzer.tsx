@@ -20,10 +20,8 @@ import {
   CloudUpload,
   Psychology,
   AutoAwesome,
-  TrendingUp,
   LocalHospital,
   Schedule,
-  AttachMoney,
   CheckCircle,
   Warning,
 } from '@mui/icons-material';

@@ -7,13 +7,7 @@ import {
   CardContent,
   Typography,
   Button,
-  Fab,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
   Chip,
-  Avatar,
   List,
   ListItem,
   ListItemIcon,
@@ -25,8 +19,7 @@ import {
   MenuItem,
   Switch,
   FormControlLabel,
-  Alert,
-  LinearProgress
+  Alert
 } from '@mui/material';
 import {
   CameraAlt,
@@ -41,12 +34,9 @@ import {
   Settings,
   PlayArrow,
   Pause,
-  RotateLeft,
-  RotateRight,
-  ZoomIn,
-  ZoomOut
+  RotateLeft
 } from '@mui/icons-material';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
 import * as THREE from 'three';
@@ -264,7 +254,7 @@ const ARViewer: React.FC<{
 };
 
 const ARConsultation: React.FC = () => {
-  const [isAROpen, setIsAROpen] = useState(false);
+  const [, setIsAROpen] = useState(false);
   const [selectedTreatment, setSelectedTreatment] = useState<TreatmentSimulation>(treatmentSimulations[0]);
   const [simulationProgress, setSimulationProgress] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);

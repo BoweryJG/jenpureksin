@@ -11,15 +11,11 @@ import {
   Grid,
   Chip,
   useTheme,
-  Tab,
-  Tabs,
   LinearProgress,
 } from '@mui/material';
 import {
   Face,
   AutoAwesome,
-  Timeline,
-  TrendingUp,
   Psychology,
 } from '@mui/icons-material';
 
@@ -236,10 +232,13 @@ const TreatmentCard: React.FC<{ treatment: TreatmentResult; intensity: number }>
 
 const TreatmentVisualizer: React.FC<TreatmentVisualizerProps> = ({ treatments = treatmentData }) => {
   const theme = useTheme();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [activeTab, setActiveTab] = useState(0);
   const [intensity, setIntensity] = useState(0.7);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedTreatments, setSelectedTreatments] = useState<string[]>(['ultherapy']);
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setActiveTab(newValue);
   };

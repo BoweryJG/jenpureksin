@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Canvas } from '@react-three/fiber';
-import { Float, Text3D, OrbitControls, Environment } from '@react-three/drei';
+import { Float, OrbitControls, Environment } from '@react-three/drei';
 import {
   Box,
   Container,
@@ -11,7 +11,7 @@ import {
   useTheme,
   Chip,
 } from '@mui/material';
-import { CalendarMonth, Phone, AutoAwesome, Science } from '@mui/icons-material';
+import { CalendarMonth, AutoAwesome, Science } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 
@@ -155,6 +155,7 @@ const ParticleField: React.FC = () => {
 };
 
 const EnhancedHeroSection: React.FC = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const theme = useTheme();
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
