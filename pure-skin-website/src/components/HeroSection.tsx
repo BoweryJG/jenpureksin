@@ -6,142 +6,9 @@ import {
   Button,
   Grid,
   useTheme,
-  keyframes,
 } from '@mui/material';
 import { CalendarMonth, Phone } from '@mui/icons-material';
 import { Link } from 'react-router-dom';
-
-// Define rotation animations
-const rotateClockwise = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-const rotateCounterClockwise = keyframes`
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
-`;
-
-const float = keyframes`
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-`;
-
-interface OrbProps {
-  size: number;
-  color: string;
-  opacity: number;
-  top?: string | number;
-  left?: string | number;
-  right?: string | number;
-  bottom?: string | number;
-  children?: React.ReactNode;
-  animationDuration?: string;
-  floatAnimation?: boolean;
-}
-
-const Orb: React.FC<OrbProps> = ({ 
-  size, 
-  color, 
-  opacity, 
-  top, 
-  left, 
-  right, 
-  bottom, 
-  children,
-  animationDuration = '30s',
-  floatAnimation = false
-}) => {
-  return (
-    <Box
-      sx={{
-        position: 'absolute',
-        top,
-        left,
-        right,
-        bottom,
-        width: size,
-        height: size,
-        animation: floatAnimation ? `${float} 3s ease-in-out infinite` : undefined,
-      }}
-    >
-      <Box
-        sx={{
-          position: 'relative',
-          width: '100%',
-          height: '100%',
-          backgroundColor: color,
-          borderRadius: '50%',
-          opacity,
-          filter: 'blur(2px)',
-        }}
-      />
-      {children && (
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '100%',
-            height: '100%',
-            animation: `${rotateClockwise} ${animationDuration} linear infinite`,
-          }}
-        >
-          {children}
-        </Box>
-      )}
-    </Box>
-  );
-};
-
-interface ChildOrbProps {
-  distance: number;
-  size: number;
-  color: string;
-  opacity: number;
-  delay?: string;
-}
-
-const ChildOrb: React.FC<ChildOrbProps> = ({ distance, size, color, opacity, delay = '0s' }) => {
-  return (
-    <Box
-      sx={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: `translate(-50%, -50%) translateX(${distance}px)`,
-        transformOrigin: `${-distance}px center`,
-        animation: `${rotateCounterClockwise} 4s linear infinite`,
-        animationDelay: delay,
-      }}
-    >
-      <Box
-        sx={{
-          width: size,
-          height: size,
-          backgroundColor: color,
-          borderRadius: '50%',
-          opacity,
-          filter: 'blur(1px)',
-          boxShadow: `0 0 20px ${color}`,
-        }}
-      />
-    </Box>
-  );
-};
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
@@ -220,14 +87,14 @@ const HeroSection: React.FC = () => {
                 color="primary"
                 size="large"
                 startIcon={<Phone />}
-                href="tel:561-123-4567"
+                href="tel:561-899-7878"
                 sx={{
                   py: 1.5,
                   px: 4,
                   fontSize: '1.1rem',
                 }}
               >
-                Call (561) 123-4567
+                Call (561) 899-7878
               </Button>
             </Box>
             <Box sx={{ mt: 4, display: 'flex', gap: 4 }}>
@@ -285,8 +152,8 @@ const HeroSection: React.FC = () => {
               }}
             >
               <img
-                src="/images/hero-image.jpg"
-                alt="Pure Skin Palm Beach Medical Spa"
+                src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                alt="Pure Skin Palm Beach Medical Spa - Professional facial treatment"
                 style={{
                   width: '100%',
                   height: 'auto',
@@ -299,140 +166,31 @@ const HeroSection: React.FC = () => {
         </Grid>
       </Container>
       
-      {/* Animated Orbs with Children */}
-      {/* Bottom left orb system */}
-      <Orb
-        size={250}
-        color={theme.palette.primary.main}
-        opacity={0.2}
-        bottom={-100}
-        left={-100}
-        animationDuration="8s"
-        floatAnimation
-      >
-        <ChildOrb
-          distance={150}
-          size={40}
-          color={theme.palette.primary.light}
-          opacity={0.3}
-          delay="0s"
-        />
-        <ChildOrb
-          distance={180}
-          size={30}
-          color={theme.palette.secondary.main}
-          opacity={0.2}
-          delay="2s"
-        />
-        <ChildOrb
-          distance={120}
-          size={25}
-          color={theme.palette.primary.dark}
-          opacity={0.25}
-          delay="4s"
-        />
-      </Orb>
-
-      {/* Top right orb system */}
-      <Orb
-        size={200}
-        color={theme.palette.secondary.main}
-        opacity={0.15}
-        top={50}
-        right={-80}
-        animationDuration="7s"
-      >
-        <ChildOrb
-          distance={120}
-          size={35}
-          color={theme.palette.secondary.light}
-          opacity={0.25}
-          delay="1s"
-        />
-        <ChildOrb
-          distance={100}
-          size={20}
-          color={theme.palette.primary.main}
-          opacity={0.2}
-          delay="3s"
-        />
-      </Orb>
-
-      {/* Middle left orb system */}
-      <Orb
-        size={150}
-        color={theme.palette.primary.light}
-        opacity={0.12}
-        top="40%"
-        left={-50}
-        animationDuration="9s"
-        floatAnimation
-      >
-        <ChildOrb
-          distance={90}
-          size={25}
-          color={theme.palette.primary.main}
-          opacity={0.3}
-          delay="0.5s"
-        />
-        <ChildOrb
-          distance={110}
-          size={20}
-          color={theme.palette.secondary.light}
-          opacity={0.25}
-          delay="2.5s"
-        />
-      </Orb>
-
-      {/* Top left small orb */}
-      <Orb
-        size={100}
-        color={theme.palette.secondary.light}
-        opacity={0.1}
-        top={120}
-        left={100}
-        animationDuration="6s"
-      >
-        <ChildOrb
-          distance={70}
-          size={15}
-          color={theme.palette.primary.main}
-          opacity={0.35}
-          delay="0s"
-        />
-      </Orb>
-
-      {/* Bottom right orb system */}
-      <Orb
-        size={180}
-        color={theme.palette.primary.dark}
-        opacity={0.13}
-        bottom={50}
-        right={-60}
-        animationDuration="10s"
-      >
-        <ChildOrb
-          distance={100}
-          size={30}
-          color={theme.palette.secondary.main}
-          opacity={0.2}
-          delay="1.5s"
-        />
-        <ChildOrb
-          distance={130}
-          size={25}
-          color={theme.palette.primary.light}
-          opacity={0.25}
-          delay="3.5s"
-        />
-        <ChildOrb
-          distance={80}
-          size={20}
-          color={theme.palette.secondary.dark}
-          opacity={0.3}
-          delay="5s"
-        />
-      </Orb>
+      {/* Simple, elegant decorative elements */}
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: -100,
+          left: -100,
+          width: 200,
+          height: 200,
+          backgroundColor: theme.palette.primary.main,
+          borderRadius: '50%',
+          opacity: 0.05,
+        }}
+      />
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 100,
+          right: -50,
+          width: 150,
+          height: 150,
+          backgroundColor: theme.palette.secondary.main,
+          borderRadius: '50%',
+          opacity: 0.05,
+        }}
+      />
     </Box>
   );
 };
