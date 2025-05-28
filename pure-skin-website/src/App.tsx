@@ -13,6 +13,7 @@ import BookingPage from './pages/BookingPage';
 import ClientDashboard from './components/ClientDashboard';
 import ARConsultation from './components/ARConsultation';
 import JenAIAssistant from './components/JenAIAssistant';
+import StrategicPortal from './pages/StrategicPortal';
 
 // Service detail pages
 import UltherapyPage from './pages/services/UltherapyPage';
@@ -44,6 +45,7 @@ function App() {
               <Route path="/book" element={<BookingPage />} />
               <Route path="/dashboard" element={<ClientDashboard />} />
               <Route path="/ar-consultation" element={<ARConsultation />} />
+              <Route path="/strategic" element={<StrategicPortal />} />
             </Routes>
             <JenAIAssistant />
           </Layout>
