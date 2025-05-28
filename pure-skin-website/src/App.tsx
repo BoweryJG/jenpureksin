@@ -10,6 +10,9 @@ import AboutPage from './pages/AboutPage';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
 import BookingPage from './pages/BookingPage';
+import ClientDashboard from './components/ClientDashboard';
+import ARConsultation from './components/ARConsultation';
+import JenAIAssistant from './components/JenAIAssistant';
 
 // Service detail pages
 import UltherapyPage from './pages/services/UltherapyPage';
@@ -39,7 +42,10 @@ function App() {
               <Route path="/team" element={<TeamPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/book" element={<BookingPage />} />
+              <Route path="/dashboard" element={<ClientDashboard />} />
+              <Route path="/ar-consultation" element={<ARConsultation />} />
             </Routes>
+            <JenAIAssistant />
           </Layout>
         </Router>
       </ThemeProvider>

@@ -16,9 +16,11 @@ import {
   Favorite,
   Star,
 } from '@mui/icons-material';
-import HeroSection from '../components/HeroSection';
+import EnhancedHeroSection from '../components/EnhancedHeroSection';
 import ServiceCards from '../components/ServiceCards';
 import TestimonialSection from '../components/TestimonialSection';
+import TreatmentVisualizer from '../components/TreatmentVisualizer';
+import AISkincareAnalyzer from '../components/AISkincareAnalyzer';
 import CTASection from '../components/CTASection';
 import { Link } from 'react-router-dom';
 
@@ -104,8 +106,8 @@ const HomePage: React.FC = () => {
         </script>
       </Helmet>
 
-      {/* Hero Section */}
-      <HeroSection />
+      {/* Enhanced Hero Section */}
+      <EnhancedHeroSection />
 
       {/* Features Section */}
       <Container maxWidth="lg" sx={{ py: 10 }}>
@@ -173,8 +175,13 @@ const HomePage: React.FC = () => {
         </Grid>
       </Container>
 
-      {/* Services Section */}
+      {/* Interactive Treatment Visualizer */}
       <Box sx={{ backgroundColor: '#f8f9fa', py: 10 }}>
+        <TreatmentVisualizer />
+      </Box>
+
+      {/* Services Section */}
+      <Box sx={{ backgroundColor: 'white', py: 10 }}>
         <Container maxWidth="lg">
           <Box textAlign="center" mb={6}>
             <Typography
@@ -211,6 +218,11 @@ const HomePage: React.FC = () => {
             </Button>
           </Box>
         </Container>
+      </Box>
+
+      {/* AI Skincare Analyzer */}
+      <Box sx={{ backgroundColor: '#f8f9fa', py: 10 }}>
+        <AISkincareAnalyzer />
       </Box>
 
       {/* About Section */}
